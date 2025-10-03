@@ -1,4 +1,47 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No: 250541031
+AD-SOYAD: Süleyman Kılınç
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+Başla
+
+    maksimumTur = 10
+    mevcutTur = 1
+    toplamSkor = 0
+    hız = 0
+    maksimumHız = 300  // km/s
+    araçHasarı = 0
+
+    Döngü mevcutTur <= maksimumTur:
+        Yazdır: "Tur " + mevcutTur + " başladı"
+
+        // 1. Hız ayarı
+        Eğer virajVar ise:
+            hız = maksimumHız * 0.5  // Virajda yavaşla
+        Değilse:
+            hız = maksimumHız  // Düz yolda maksimum hız
+
+        // 2. Riskli manevra kontrolü
+        Eğer araçHasarı < 20 VE riskliManevraGerekli ise:
+            manevra = "risk al"
+            araçHasarı = araçHasarı + 10
+            skor = skor + 20  // risk ödülü
+        Değilse:
+            manevra = "normal sür"
+
+        // 3. Turbo / boost kullanımı
+        Eğer boostVar ve düzYol:
+            hız = hız + 50
+            boostVar = false
+
+        // 4. Tur skorunu hesapla
+        turSkoru = hız - araçHasarı
+        toplamSkor = toplamSkor + turSkoru
+
+        Yazdır: "Tur " + mevcutTur + " skoru: " + turSkoru
+        mevcutTur = mevcutTur + 1
+
+    Yazdır: "Toplam skor: " + toplamSkor
+    Yazdır: "Araç hasarı: " + araçHasarı
+
+Bitir
+
