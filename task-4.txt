@@ -1,4 +1,26 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No: 250541031
+AD-SOYAD: Süleyman Kılınç
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+Algoritma RenkKaristir
+    Girdi: hedef renk (R, G, B)
+    Çıktı: en yakın karışım (R, G, B)
+
+    en küçük fark = çok büyük bir sayı
+    en yakın karışım = (0, 0, 0)
+
+    Kırmızı rengin değeri 0’dan 255’e kadar değişsin
+        Yeşil rengin değeri 0’dan 255’e kadar değişsin
+            Mavi rengin değeri 0’dan 255’e kadar değişsin
+                fark = RenkFarki(hedef renk, (Kırmızı, Yeşil, Mavi))
+                Eğer fark en küçük farktan küçükse
+                    en küçük fark = fark
+                    en yakın karışım = (Kırmızı, Yeşil, Mavi)
+                Bitti
+            Bitti
+        Bitti
+    Bitti
+
+    Yazdır: "Hedef renge en yakın karışım:", en yakın karışım
+SonAlgoritma
+
