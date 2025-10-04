@@ -1,4 +1,41 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No: 250541031
+AD-SOYAD: Süleyman Kılınç
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+# Girdi: oyuncu, tahta, mülkler, nakit, rakipler
+# Çıktı: yapılacak en iyi hamle (örnek: "Satın Al", "Ev Yap", "İpotek Et", "Pas Geç")
+
+Başla
+
+    mevcut_kare ← oyuncu.konumu
+    nakit ← oyuncu.nakit
+
+    Eğer mevcut_kare bir mülkse ve sahibi yoksa:
+        Eğer nakit >= mevcut_kare.fiyat VE (nakit - mevcut_kare.fiyat) > güvenli_nakit_limiti:
+            Yazdır("En iyi hamle: " + mevcut_kare.ad + " mülkünü SATIN AL")
+        Değilse:
+            Yazdır("En iyi hamle: PAS GEÇ, paran az")
+
+    Değilse eğer oyuncu tam_sete_sahip_mi():
+        set ← en_yüksek_kira_artışı_veren_seti_bul(oyuncu)
+        Eğer nakit >= set.ev_fiyatı:
+            Yazdır("En iyi hamle: " + set.ad + " setine EV YAP")
+        Değilse:
+            Yazdır("En iyi hamle: EV YAPMA, paran yetmiyor")
+
+    Değilse eğer nakit < güvenli_nakit_limiti:
+        ipotek_mülkü ← düşük_kira_getiren_mülkü_bul(oyuncu)
+        Eğer ipotek_mülkü varsa:
+            Yazdır("En iyi hamle: " + ipotek_mülkü.ad + " mülkünü İPOTEK ET")
+        Değilse:
+            Yazdır("En iyi hamle: PAS GEÇ")
+
+    Değilse eğer karlı_takas_var_mı(oyuncu, rakipler):
+        takas ← en_karlı_takası_bul(oyuncu, rakipler)
+        Yazdır("En iyi hamle: TAKAS YAP → " + takas.özeti)
+
+    Aksi halde:
+        Yazdır("En iyi hamle: PAS GEÇ, bekle ve stratejiyi koru")
+
+Bitir
+
