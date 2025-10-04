@@ -1,4 +1,47 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No: 250541031
+AD-SOYAD: Süleyman Kılınç
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+# Girdi: Kullanıcının girdiği ürün sayısı ve ürün isimleri
+# Çıktı: Ürünlerin kategorilere ayrılmış listesi
+
+Başla
+
+    Yazdır("Kaç tane ürün gireceksiniz?")
+    ürün_sayısı ← oku()
+
+    # Boş listeler oluştur
+    yiyecekler ← []
+    içecekler ← []
+    temizlik_malzemeleri ← []
+    diğerleri ← []
+
+    # Ürünleri kullanıcıdan al
+    Sayaç ← 1
+    Tekrarla ürün_sayısı kadar:
+        Yazdır(Sayaç + ". ürünü girin:")
+        ürün ← oku()
+
+        Eğer ürün == "Elma" veya ürün == "Ekmek" veya ürün == "Peynir" veya ürün == "Yumurta" ise:
+            yiyecekler’e ekle(ürün)
+
+        Değilse eğer ürün == "Kola" veya ürün == "Süt" veya ürün == "Su" veya ürün == "Meyve suyu" ise:
+            içecekler’e ekle(ürün)
+
+        Değilse eğer ürün == "Deterjan" veya ürün == "Sabun" veya ürün == "Şampuan" veya ürün == "Çamaşır suyu" ise:
+            temizlik_malzemeleri’ne ekle(ürün)
+
+        Aksi halde:
+            diğerleri’ne ekle(ürün)
+
+        Sayaç ← Sayaç + 1
+
+    # Sonuçları yazdır
+    Yazdır("---- KATEGORİLERE AYRILMIŞ ENVANTER ----")
+    Yazdır("Yiyecekler: " + yiyecekler)
+    Yazdır("İçecekler: " + içecekler)
+    Yazdır("Temizlik Malzemeleri: " + temizlik_malzemeleri)
+    Yazdır("Diğerleri: " + diğerleri)
+
+Bitir
+
