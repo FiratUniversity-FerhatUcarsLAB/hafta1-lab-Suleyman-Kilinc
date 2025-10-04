@@ -4,7 +4,7 @@ AD-SOYAD: Süleyman Kılınç
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
 Başla
 
-    maksimumTur = 10
+    maksimumTur = 10 
     mevcutTur = 1
     toplamSkor = 0
     hız = 0
