@@ -1,4 +1,31 @@
-Öğrenci No:
-AD-SOYAD:
+Öğrenci No: 250541031
+AD-SOYAD: Süleyman Kılınç
 
 Lütfen seçtiğiniz algoritmaya ait çözümü ve diğer isterleri aşağıya ekleyiniz:
+Başla
+1. Kamerayı hazırla
+2. Işığı kontrol et
+   Eğer doğal ışık varsa devam et
+   Eğer yoksa yapay ışık aç
+3. Arka planı kontrol et
+   Eğer dağınıksa veya dikkat dağıtıyorsa temizle veya açıyı değiştir
+4. Pozunu seç
+   a. Yüzünü aç
+   b. Gülümse veya karizmatik bakış
+   c. Başını hafif yana eğ
+   d. Omuzları ve vücudu doğal tut
+5. Kamera açısını ayarla
+   - Telefonu hafif yukarıdan tut
+   - Gerekiyorsa tripod veya selfie çubuğu kullan
+6. Filtre veya efekt düşün
+   Eğer doğal görünüm isteniyorsa filtreyi kapat
+   Yoksa uygun filtreyi uygula
+7. Fotoğrafı çek
+   - Farklı açılardan birkaç deneme yap
+8. Fotoğrafları kontrol et
+   Eğer beğendiysen kaydet
+   Eğer beğenmediysen 4. adıma dön
+9. Son dokunuş
+   - Gerekiyorsa kırp veya ışık ayarı yap
+Bitir
+
